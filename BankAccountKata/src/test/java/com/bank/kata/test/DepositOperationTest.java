@@ -43,7 +43,7 @@ public class DepositOperationTest {
 	@Test
 	@DatabaseSetup("/sampleData.xml")
 	public void testAccountFound() {
-		account = accountService.findByPinCode(123);
+		account = accountService.findByPinCode(345);
 		assertEquals("123ABC", account.getCountNumer());
 	}
 

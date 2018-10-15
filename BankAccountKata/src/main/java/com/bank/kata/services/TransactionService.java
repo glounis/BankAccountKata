@@ -29,6 +29,14 @@ public class TransactionService {
 				return true;
 			}
 		}else {
+			Account account = transaction.getAccount();
+			//test if there is enough balance in the account
+			if(account.getBalance() < transaction.getAmount()) {
+				return false;
+			}			
+			account.setBalance(account.getBalance() - transaction.getAmount());
+	        em.merge(account);
+			transaction.setAccount(account);
 			em.merge(transaction);
 			return true;
 		}

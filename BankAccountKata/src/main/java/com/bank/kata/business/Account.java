@@ -1,5 +1,6 @@
 package com.bank.kata.business;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -12,6 +13,7 @@ public class Account {
 	private long id; 
 	private String countNumer; 
 	private float balance;
+	@Column(unique=true)
 	private int pinCode;
 	//other attributes if need... 
 	
