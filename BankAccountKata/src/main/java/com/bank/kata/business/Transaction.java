@@ -3,6 +3,7 @@ package com.bank.kata.business;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -15,7 +16,7 @@ public class Transaction {
 	private String transactionType;
 	private Date transactionDate;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name="account_id" , nullable = false)
 	private Account account;
     //other attributes if need ... 

@@ -18,15 +18,13 @@ public class AccountService {
 	@PersistenceContext
 	private EntityManager entityManager;
 	
-	public Account findByPinCode(int pinCode) {
+	public Account findByPinCode(int pinCode) throws NoResultException {
 		Account acount = null;
 		Query query = entityManager.createQuery("FROM Account a where a.pinCode = :pinCode", Account.class);
 		query.setParameter("pinCode", pinCode);
-		 try {
+		
 		acount = (Account) query.getSingleResult();
-		 }catch(NoResultException re) {
-			 
-		 }
+		
 		return acount;
 	}
 
