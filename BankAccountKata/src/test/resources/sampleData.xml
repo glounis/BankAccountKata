@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataset>
-    <Account id="0" countNumer="123ABC" balance="1555.5" pinCode="123"/>
-    <Account id="1" countNumer="123PCD" balance="2555.5" pinCode="345"/>
+  <!-- List of clients -->
+    <Client id="1" lastName="Dupond" firstName="Jean" adress="1, rue de la paix, 75010" phoneNumber = "06060606" />
+    <Client id="2" lastName="Dupond" firstName="Jean" adress="1, rue de la paix, 75010" phoneNumber = "06060606" />
+    <Client id="3" lastName="Dupond" firstName="Jean" adress="1, rue de la paix, 75010" phoneNumber = "06060606" />
+    <Client id="4" lastName="Dupond" firstName="Jean" adress="1, rue de la paix, 75010" phoneNumber = "06060606" />
+    <Client id="5" lastName="Dupond" firstName="Jean" adress="1, rue de la paix, 75010" phoneNumber = "06060606" />
+    <Client id="6" lastName="Dupond" firstName="Jean" adress="1, rue de la paix, 75010" phoneNumber = "06060606" />
+    <Client id="7" lastName="Dupond" firstName="Jean" adress="1, rue de la paix, 75010" phoneNumber = "06060606" />
+    <Client id="8" lastName="Dupond" firstName="Jean" adress="1, rue de la paix, 75010" phoneNumber = "06060606" />   
+   <!-- List of accounts --> 
+    <Account id="1" countNumer="123ABC" balance="1555.5" pinCode="123" client_id ="1"/>
+    <Account id="2" countNumer="123PCD" balance="2555.5" pinCode="345" client_id ="2"/>
+    <Account id="3" countNumer="123FGH" balance="3400" pinCode="678" client_id ="3"/>
+    <Account id="6" countNumer="123OPQ" balance="1256" pinCode="113" client_id ="4"/>
+    <Account id="7" countNumer="123RST" balance="25000" pinCode="114" client_id ="5"/>
+    <Account id="8" countNumer="123UVW" balance="15000" pinCode="345" client_id ="6"/>
+    <!-- List of Transactions -->
+    <transaction id="1" amount="500" transactionType ="deposit" transactionDate="2018-09-24" account_id ="1" />
 </dataset>

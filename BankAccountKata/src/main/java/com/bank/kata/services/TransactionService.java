@@ -17,7 +17,7 @@ public class TransactionService {
 	@PersistenceContext
 	EntityManager em;
 	public boolean addTransaction(Transaction transaction) {		
-		if(transaction.getTransactionType().equals(BankAccountConstant.TRANSACTTION_TYPE_DEPOT)) {
+		if(transaction.getTransactionType().equals(BankAccountConstant.TRANSACTTION_TYPE_DEPOSIT)) {
 			if(transaction.getAmount() < 0) {
 				return false; 
 			}else {

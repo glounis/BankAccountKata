@@ -9,6 +9,8 @@ public class Client {
 	private long id; 
 	private String lastName; 
 	private String firstName; 	
+	private String adress; 
+	private String phoneNumber; 
 	//Others attributes if need... 
 	
 	//Getters and setters

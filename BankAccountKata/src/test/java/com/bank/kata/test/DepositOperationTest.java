@@ -70,7 +70,7 @@ public class DepositOperationTest {
 			transaction.setAccount(account);
 			transaction.setAmount(550);
 			transaction.setTransactionDate(new Date());
-			transaction.setTransactionType(BankAccountConstant.TRANSACTTION_TYPE_DEPOT);
+			transaction.setTransactionType(BankAccountConstant.TRANSACTTION_TYPE_DEPOSIT);
 
 			boolean accepted = transactionService.addTransaction(transaction);
 			assertEquals(accepted, true);
@@ -93,7 +93,7 @@ public class DepositOperationTest {
 			transaction.setAccount(account);
 			transaction.setAmount(-550);
 			transaction.setTransactionDate(new Date());
-			transaction.setTransactionType(BankAccountConstant.TRANSACTTION_TYPE_DEPOT);
+			transaction.setTransactionType(BankAccountConstant.TRANSACTTION_TYPE_DEPOSIT);
 
 			boolean accepted = transactionService.addTransaction(transaction);
 			assertEquals(accepted, false);
