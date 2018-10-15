@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <Account id="0" countNumer="123ABC" balance="1555.5" pinCode="123"/>
+    <Account id="1" countNumer="123PCD" balance="2555.5" pinCode="345"/>
+</dataset>
