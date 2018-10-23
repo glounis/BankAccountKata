@@ -2,6 +2,7 @@ package com.bank.kata.business;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -12,7 +13,8 @@ import javax.persistence.ManyToOne;
 public class Transaction {
 	@Id
 	private long id;
-	private float amount;
+	@Column(columnDefinition="Decimal(10,2)")
+	private double amount;
 	private String transactionType;
 	private Date transactionDate;
 	
@@ -28,10 +30,10 @@ public class Transaction {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public float getAmount() {
+	public double getAmount() {
 		return amount;
 	}
-	public void setAmount(float amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
 	public String getTransactionType() {

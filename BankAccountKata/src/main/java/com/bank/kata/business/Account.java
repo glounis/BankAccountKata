@@ -12,6 +12,7 @@ public class Account {
 	@Id
 	private long id; 
 	private String countNumer; 
+	@Column(columnDefinition="Decimal(10,2)")
 	private double balance;
 	@Column(unique=true)
 	private int pinCode;

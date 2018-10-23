@@ -45,7 +45,7 @@ public class WithdrawalOperationTest {
 			//If the account is founded, the transaction must be done 
 			Transaction transaction = new Transaction();
 			transaction.setAccount(account);
-			transaction.setAmount(1550);
+			transaction.setAmount(431);
 			transaction.setTransactionDate(new Date());
 			transaction.setTransactionType(BankAccountConstant.TRANSACTTION_TYPE_WITHDRAWAL);
 
@@ -67,7 +67,7 @@ public class WithdrawalOperationTest {
 			//If the account is founded, the transaction must be done 
 			Transaction transaction = new Transaction();
 			transaction.setAccount(account);
-			transaction.setAmount(1600);
+			transaction.setAmount(431.5);
 			transaction.setTransactionDate(new Date());
 			transaction.setTransactionType(BankAccountConstant.TRANSACTTION_TYPE_WITHDRAWAL);
 
