@@ -15,7 +15,13 @@
     <Account id="3" countNumer="123FGH" balance="3400" pinCode="678" client_id ="3"/>
     <Account id="6" countNumer="123OPQ" balance="1256" pinCode="113" client_id ="4"/>
     <Account id="7" countNumer="123RST" balance="25000" pinCode="114" client_id ="5"/>
-    <Account id="8" countNumer="123UVW" balance="15000" pinCode="345" client_id ="6"/>
+    <Account id="8" countNumer="123UVW" balance="15000" pinCode="346" client_id ="6"/>
     <!-- List of Transactions -->
-    <transaction id="1" amount="500" transactionType ="deposit" transactionDate="2018-09-24" account_id ="1" />
+    <transaction id="1" amount="500" transactionType ="DEPOSIT" transactionDate="2018-09-24" account_id ="1" />
+    <transaction id="2" amount="325" transactionType ="DEPOSIT" transactionDate="2018-09-02" account_id ="1" />
+    <transaction id="3" amount="450" transactionType ="WITHDRAWAL" transactionDate="2018-06-07" account_id ="1" />
+    <transaction id="4" amount="50" transactionType ="DEPOSIT" transactionDate="2018-06-03" account_id ="1" />
+    <transaction id="5" amount="13.58" transactionType ="WITHDRAWAL" transactionDate="2018-07-24" account_id ="1" />
+    <transaction id="6" amount="20" transactionType ="DEPOSIT" transactionDate="2018-07-26" account_id ="1" />   
+        
 </dataset>

@@ -16,7 +16,7 @@ public class Transaction {
 	private String transactionType;
 	private Date transactionDate;
 	
-	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	@ManyToOne(fetch = FetchType.EAGER, optional = false)
 	@JoinColumn(name="account_id" , nullable = false)
 	private Account account;
     //other attributes if need ... 

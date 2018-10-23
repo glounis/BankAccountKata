@@ -19,7 +19,7 @@ public class Account {
 	
 	//here, I consider that on client can have many accounts, but one account is private for 
 	// just only one client. I don't manage the case when an account is for many persons. 
-	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	@ManyToOne(fetch = FetchType.EAGER, optional = false)
 	@JoinColumn(name="client_id" , nullable = false)
 	private Client client;
 	

@@ -1,7 +1,11 @@
 package com.bank.kata.services;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,6 +20,7 @@ public class TransactionService {
 	
 	@PersistenceContext
 	EntityManager em;
+	
 	public boolean addTransaction(Transaction transaction) {		
 		if(transaction.getTransactionType().equals(BankAccountConstant.TRANSACTTION_TYPE_DEPOSIT)) {
 			if(transaction.getAmount() < 0) {
@@ -40,6 +45,18 @@ public class TransactionService {
 			em.merge(transaction);
 			return true;
 		}
+	}
+	
+	
+	public List<Transaction> getTransactionFromAccountPin(int pinCode){
+		List<Transaction> transactions = new ArrayList<Transaction>();
+		
+		Query query = em.createQuery("From Transaction t where t.account.pinCode = :pinCode", Transaction.class);
+		query.setParameter("pinCode", pinCode);
+		
+		transactions =  query.getResultList();
+		
+		return  transactions;
 	}
 
 }
