@@ -12,7 +12,7 @@ public class Account {
 	@Id
 	private long id; 
 	private String countNumer; 
-	private float balance;
+	private double balance;
 	@Column(unique=true)
 	private int pinCode;
 	//other attributes if need... 
@@ -36,10 +36,10 @@ public class Account {
 	public void setCountNumer(String countNumer) {
 		this.countNumer = countNumer;
 	}
-	public float getBalance() {
+	public double getBalance() {
 		return balance;
 	}
-	public void setBalance(float balance) {
+	public void setBalance(double balance) {
 		this.balance = balance;
 	}
 	public int getPinCode() {
