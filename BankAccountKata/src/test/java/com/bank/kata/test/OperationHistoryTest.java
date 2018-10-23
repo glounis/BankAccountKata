@@ -49,18 +49,6 @@ public class OperationHistoryTest {
 	@Test
 	@DatabaseSetup("/sampleData.xml")
 	public void test() {
-//	   int i = 0;
-//	   String pinCode = "";
-//	   while(i<3 && pinCode.isEmpty()) {
-//		   i++;
-//		   try {
-//			   pinCode = enterPinCode(); 
-//		   }catch (NumberFormatException e) {
-//			// TODO: handle exception
-//		}
-//		
-//	   }
-		
 		try {
 			//login on the account using pinCode...
 			account = accountService.findByPinCode(123);
